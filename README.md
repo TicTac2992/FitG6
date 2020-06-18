@@ -8,7 +8,7 @@ A fitness application submitted as project 1 for week 7 by Jared Varnum, Tammy C
 ### Summary:
 This project utilizes HTML and CSS styles to build a...
 
-### Psuedo Code:
+### Pseudo Code:
 * 
 
 ### Features:
