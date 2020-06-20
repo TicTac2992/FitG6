@@ -22,3 +22,24 @@
         //Text areas for each Day of the week needs text to persist
         //Text area persisting needs to be designated by user by save button
         
+
+var dayBlocks = [1, 2, 3, 4, 5, 6, 7];
+
+
+for (var i = 0; i < dayBlocks.length; i++) {
+    var myValue = localStorage.getItem(dayBlocks[i]);
+
+
+    $(".day" + dayBlocks[i]).val(myValue);
+}
+
+//Event listner set used to save to local storage using the setItem method.
+$(".saveBtn").on("click", function(event) {
+    event.preventDefault();
+    var keyValue  = $(this).siblings(".form-control").val();
+    var key = $(this).parent().data("day");
+
+    localStorage.setItem(key, keyValue);
+
+});
+
