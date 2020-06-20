@@ -6,26 +6,7 @@
         //celebratory function initiates when all goals are completed
         //Use D3.js to add pie chart functionality
         //styles activate faces based on weather or not checkbox is filled
-        // When checkbox is checked inspirational quote appears and check box is hidden
-        fetch("https://type.fit/api/quotes")
-        .then(function(response) {
-          return response.json();
-        })
-        .then(function(data) {
-          console.log(data);
-        });
-      
-        const settings = {
-          "async": true,
-          "crossDomain": true,
-          "url": "https://type.fit/api/quotes",
-          "method": "GET"
-        }
-        
-        $.ajax(settings).done(function (response) {
-          const data = JSON.parse(response);
-          console.log(data);
-        });        
+        // When checkbox is checked inspirational quote appears and check box is hidden      
         
 //                      Page Two Weekly Breakdown
         //Continuous pagination for navbar
