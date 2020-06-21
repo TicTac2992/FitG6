@@ -7,6 +7,33 @@
         //Use D3.js to add pie chart functionality
         //styles activate faces based on weather or not checkbox is filled
         // When checkbox is checked inspirational quote appears and check box is hidden
+
+fetch("https://type.fit/api/quotes")
+.then(function(response) {
+    return response.json();
+})
+.then(function(data) {
+    console.log(data);
+});   
+
+
+$.ajax({
+    url: https://type.fit/api/quotes
+    method: 
+
+    
+})
+const settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "https://type.fit/api/quotes",
+    "method": "GET"
+  }
+  
+$.ajax(settings).done(function (response) {
+    const data = JSON.parse(response);
+    console.log(data);
+  });
         
 //                      Page Two Weekly Breakdown
         //Continuous pagination for navbar
@@ -21,7 +48,6 @@
         //Weekly journal header animation
         //Text areas for each Day of the week needs text to persist
         //Text area persisting needs to be designated by user by save button
-        
 
 var dayBlocks = [1, 2, 3, 4, 5, 6, 7];
 
