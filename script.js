@@ -7,6 +7,26 @@
         //Use D3.js to add pie chart functionality
         //styles activate faces based on weather or not checkbox is filled
         // When checkbox is checked inspirational quote appears and check box is hidden
+
+anychart.onDocumentLoad(function () {
+        // create an instance of a pie chart
+        var chart = anychart.pie();
+        // set the data
+        chart.data([
+                ["Walk 5,000 Steps", 2.5],
+                ["120 Sit-Ups", 2.5],
+                ["60 oz Water Intake", 2.5],
+                ["60 Push-Ups", 2.5]
+        ]);
+        // enable aqua style
+        chart.fill("aquastyle");
+        // set chart title
+        chart.title("Daily Goals");
+        // set the container element 
+        chart.container("containerPie");
+        // initiate chart display
+        chart.draw();
+              });
         
 //                      Page Two Weekly Breakdown
         //Continuous pagination for navbar
@@ -15,6 +35,81 @@
         //Use D3.js to add interactive graph
         //graph should correspond with checkboxes
         //7-Day Forcast implements API call to open weather and returns data.
+
+        var tooltipChart = null;
+        var title = null;
+        anychart.onDocumentReady(function () {
+            var data = anychart.data.set([
+                ['Sunday', 10000, 6000, 3200, 2159, 2089],
+                ['Monday', 10000, 2367, 1989, 2383, 4199],
+                ['Tuesday', 10000, 2156, 2399, 2867, 2567],
+                ['Wednesday', 10000, 2398, 2225, 3010, 2593],
+                ['Thursday', 10000, 2851, 3007, 2805, 2341],
+                ['Friday', 10000, 3400, 2105, 2563, 2866],
+                ['Saturday', 10000, 2878, 2933, 3561, 1903]
+            ]);
+        
+            var dataMapping = data.mapAs({x: 0, value: 1});
+        
+            chart = anychart.column(dataMapping);
+        
+            var tooltip = chart.tooltip();
+            tooltip.useHtml(true);
+            tooltip.separator(false);
+        
+            // Create a tooltip chart and title.
+            tooltip.onDomReady(function() {
+                this.contentElement.style.width = '200px';
+                this.contentElement.style.height = '150px';
+                tooltipChart.container(this.contentElement);
+                tooltipChart.draw();
+        
+                this.titleElement.style.width = '200px';
+                this.titleElement.style.height = '60px';
+                title.container(this.titleElement);
+                title.draw();
+        
+            });
+        
+            tooltip.onBeforeTitleChange(function() {
+                // Prevent overriding content of this.titleElement
+                return false;
+            });
+        
+            tooltip.onBeforeContentChange(function() {
+                // Prevent overriding content of this.contentElement
+                return false;
+            });
+        
+            chart.listen('pointMouseOver', function(e) {
+                var index = e.pointIndex;
+                var dataRow = data.row(index);
+                tooltipChart = tooltipChart || createChart();
+                tooltipChart.data([
+                    {x: 'Goal 1', value: dataRow[2]},
+                    {x: 'Goal 2', value: dataRow[3]},
+                    {x: 'Goal 3', value: dataRow[4]},
+                    {x: 'Goal 4', value: dataRow[5]}
+                ]);
+                title = title || anychart.standalones.title();
+                title.text("Goals Completed for " + dataRow[0]);
+                title.fontColor('#ffffff');
+            });
+        
+            chart.title('Fitness Goals Progress by Days of The Week:');
+            chart.container('container');
+            chart.draw();
+        });
+        
+        function createChart() {
+            var chart = anychart.bar();
+            chart.title().fontSize(12);
+            chart.xAxis().stroke(null).ticks(false);
+            chart.xAxis().labels().fontSize(10);
+            chart.yAxis().labels().fontSize(10);
+            chart.padding([0, 12, 0, 0]);
+            return chart;
+        };
 
 $("button").on("click", function() {
         var userCity = $(".thisCity").val().trim();
