@@ -1,3 +1,28 @@
+//                      Page Three Personal Notes
+        //Continuous pagination for navbar
+        //Weekly journal header animation
+        //Text areas for each Day of the week needs text to persist
+        //Text area persisting needs to be designated by user by save button
+var dayBlocks = [1, 2, 3, 4, 5, 6, 7];
+
+
+for (var i = 0; i < dayBlocks.length; i++) {
+    var myValue = localStorage.getItem(dayBlocks[i]);
+
+
+    $(".day" + dayBlocks[i]).val(myValue);
+}
+
+//Event listner set used to save to local storage using the setItem method.
+$(".saveBtn").on("click", function(event) {
+    event.preventDefault();
+    var keyValue  = $(this).siblings(".form-control").val();
+    var key = $(this).parent().data("day");
+
+    localStorage.setItem(key, keyValue);
+
+});
+
 //                      Page One Daily Goals
         // Drop down pagination for Navbar
         // Jumbotron fade in function to welcome user
@@ -124,7 +149,7 @@ $("button").on("click", function() {
                 $(".5day").empty();
 
                 // Day1 Card
-                $(".5day").append("<div class='card-body text-white bg-primary m-3 rounded float-left day1' style='max-width: 18rem;'>");
+                $(".5day").append("<div class='card-section g6card day1'>");
                 var day1Time = new Date(response.list[3].dt * 1000);
                 $(".day1").append("<h5>" + day1Time.toLocaleDateString("en-US") + "</h5>");
                 $(".day1").append(`<img src="https://openweathermap.org/img/wn/${response.list[3].weather[0].icon}@2x.png">`);
@@ -133,7 +158,7 @@ $("button").on("click", function() {
                 $(".day1").append("<p>" + "Humidity: " + response.list[3].main.humidity + " %" + "</p>");
         
                 // Day2 Card
-                $(".5day").append("<div class='card-body text-white bg-primary m-3 rounded float-left day2' style='max-width: 18rem;'>");
+                $(".5day").append("<div class='card-section g6card day2'>");
                 var day2Time = new Date(response.list[11].dt * 1000);
                 $(".day2").append("<h5>" + day2Time.toLocaleDateString("en-US") + "</h5>");
                 $(".day2").append(`<img src="https://openweathermap.org/img/wn/${response.list[11].weather[0].icon}@2x.png">`);
@@ -142,7 +167,7 @@ $("button").on("click", function() {
                 $(".day2").append("<p>" + "Humidity: " + response.list[11].main.humidity + " %" + "</p>");
         
                 // Day3 Card
-                $(".5day").append("<div class='card-body text-white bg-primary m-3 rounded float-left day3' style='max-width: 18rem;'>");
+                $(".5day").append("<div class='card-section g6card day3'>");
                 var day3Time = new Date(response.list[19].dt * 1000);
                 $(".day3").append("<h5>" + day3Time.toLocaleDateString("en-US") + "</h5>");
                 $(".day3").append(`<img src="https://openweathermap.org/img/wn/${response.list[19].weather[0].icon}@2x.png">`);
@@ -151,7 +176,7 @@ $("button").on("click", function() {
                 $(".day3").append("<p>" + "Humidity: " + response.list[19].main.humidity + " %" + "</p>");
         
                 // Day4 Card
-                $(".5day").append("<div class='card-body text-white bg-primary m-3 rounded float-left day4' style='max-width: 18rem;'>");
+                $(".5day").append("<div class='card-section g6card day4'>");
                 var day4Time = new Date(response.list[27].dt * 1000);
                 $(".day4").append("<h5>" + day4Time.toLocaleDateString("en-US") + "</h5>");
                 $(".day4").append(`<img src="https://openweathermap.org/img/wn/${response.list[27].weather[0].icon}@2x.png">`);
@@ -160,7 +185,7 @@ $("button").on("click", function() {
                 $(".day4").append("<p>" + "Humidity: " + response.list[27].main.humidity + " %" + "</p>");
         
                 // Day5 Card
-                $(".5day").append("<div class='card-body text-white bg-primary m-3 rounded float-left day5' style='max-width: 18rem;'>");
+                $(".5day").append("<div class='card-section g6card day5'>");
                 var day5Time = new Date(response.list[35].dt * 1000);
                 $(".day5").append("<h5>" + day5Time.toLocaleDateString("en-US") + "</h5>");
                 $(".day5").append(`<img src="https://openweathermap.org/img/wn/${response.list[35].weather[0].icon}@2x.png">`);
@@ -172,30 +197,8 @@ $("button").on("click", function() {
 
 });
 
-//                      Page Three Personal Notes
-        //Continuous pagination for navbar
-        //Weekly journal header animation
-        //Text areas for each Day of the week needs text to persist
-        //Text area persisting needs to be designated by user by save button
+
         
 
-var dayBlocks = [1, 2, 3, 4, 5, 6, 7];
 
-
-for (var i = 0; i < dayBlocks.length; i++) {
-    var myValue = localStorage.getItem(dayBlocks[i]);
-
-
-    $(".day" + dayBlocks[i]).val(myValue);
-}
-
-//Event listner set used to save to local storage using the setItem method.
-$(".saveBtn").on("click", function(event) {
-    event.preventDefault();
-    var keyValue  = $(this).siblings(".form-control").val();
-    var key = $(this).parent().data("day");
-
-    localStorage.setItem(key, keyValue);
-
-});
 

@@ -45,69 +45,54 @@
 </div>
 
 <div class="p3container">
+  <div class="g6marg">
+    <form action="/action_page.php" class="grid-x align-center">
+      <input type="checkbox" id="sunday" name="sunday" value="sunday">
+      <label for="sunday"> Sunday</label>
+      
+      <input type="checkbox" id="monday" name="monday" value="monday">
+      <label for="monday"> Monday</label>
+      
+      <input type="checkbox" id="tuesday" name="tuesday" value="tuesday">
+      <label for="tuesday"> Tuesday</label>
+      
+      <input type="checkbox" id="wednesday" name="wednesday" value="wednesday">
+      <label for="wednesday"> Wednesday</label>
+      
+      <input type="checkbox" id="thursday" name="thursday" value="thursday">
+      <label for="thursday"> Thursday</label>
+      
+      <input type="checkbox" id="friday" name="friday" value="friday">
+      <label for="friday"> Friday</label>
 
-  <form action="/action_page.php">
-    <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-    <label for="vehicle1"> I have a bike</label><br>
-    <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
-    <label for="vehicle2"> I have a car</label><br>
-    <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
-    <label for="vehicle3"> I have a boat</label><br>
-    <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-    <label for="vehicle1"> I have a bike</label><br>
-    <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
-    <label for="vehicle2"> I have a car</label><br>
-    <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
-    <label for="vehicle3"> I have a boat</label><br>
-    <input type="submit" value="Submit">
-  </form>
+      <input type="checkbox" id="saturday" name="saturday" value="saturday">
+      <label for="saturday"> Saturday</label>
+    
+      <input type="submit" value="Submit">
+    </form>
+  
+  </div>
 
   <div id="container" class="g6layer"></div>
 
-  <div class="card" style="width: 300px;">
-    <div class="card-divider">
-      This is a header
-    </div>
+  <div class="container3 g6layer">
     
-    <div class="card-section">
-      <h4>This is a card.</h4>
-      <p>It has an easy to override visual style, and is appropriately subdued.</p>
-    </div>
-  </div>
-
-
-
-  <div class="col">
-    <div class="card" style="width: 22rem;">
-        <div class="card">
             
-                <h5 class="card-title mb-2">Enter City Name:</h5>
+      <h5>Enter City Name:</h5>
 
-            <div class="col">
-                <div class="input-group mb-2">
-                    <input type="text" class="form-control card-text thisCity myInput" id="user-city">
-                    <button class="btn btn-primary mr-1"><i class="fas fa-search"></i></button>
-                </div>
-            </div>
-
-            <div class="list-group">
-
-              <div class="row">
-                <div class="col mt-2 d-flex">
-                    <h3>5-Day Forecast:</h3>
-                    <div class="5day">
+          <div class="col">
+              <div class="input-group">
+                  <input type="text" class="form-control thisCity myInput" id="user-city">
+                  <button class="button radius bordered shadow primary"><i class="fas fa-search"></i></button>
+              </div>
+          </div>
+          <h3 class="align-center">5-Day Forecast:</h3>
+          <div class="5day grid-x">
                             
                             
-                    </div>
-                </div>
-            </div>
-
-
-            </div>
-        </div>
-   </div>
-
-</div>
+          </div>
+    
+  </div>
 
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
