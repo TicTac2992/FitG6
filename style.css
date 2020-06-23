@@ -27,9 +27,33 @@
         background-color:#f0f0f0;
       }
 
+      .g6card {
+        background-color: darksalmon;
+        color: aliceblue;
+        border-radius: 10px;
+        width: fit-content;
+        margin: 20px;
+      }
+
       .g6layer {
         box-shadow: 0 0 10px 2px;
         border-radius: 3px;
+      }
+
+      .container3 {
+        background-color: lightgray;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        padding: 10px;
+      }
+
+      .g6marg {
+        margin: 50px;
+      }
+
+      .dates {
+          margin: auto;
+          width: 110px;
       }
 
       .p3body {
@@ -67,6 +91,11 @@
       .p3container {
         max-width: 80%;
         margin: auto;
+    }
+
+    .g6form {
+        height: 6rem;
+        margin: 0;
     }
       
       .day{
