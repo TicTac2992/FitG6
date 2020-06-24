@@ -3,7 +3,7 @@
         //Weekly journal header animation
         //Text areas for each Day of the week needs text to persist
         //Text area persisting needs to be designated by user by save button
-var dayBlocks = [1, 2, 3, 4, 5, 6, 7];
+var dayBlocks = [ 5, 6, 7, 8, 9, 10, 11];
 
 
 for (var i = 0; i < dayBlocks.length; i++) {
@@ -37,10 +37,10 @@ $(".saveBtn").on("click", function(event) {
 
 
         for (var i = 0; i < goalBlocks.length; i++) {
-            var myValue = localStorage.getItem(goalBlocks[i]);
+            var myValue2 = localStorage.getItem(goalBlocks[i]);
         
         
-            $(".goal" + goalBlocks[i]).val(myValue);
+            $(".goal" + goalBlocks[i]).val(myValue2);
         }
         
         //Event listner set used to save to local storage using the setItem method.
@@ -55,6 +55,8 @@ $(".saveBtn").on("click", function(event) {
             
         // create an instance of a pie chart
         var chart = anychart.pie();
+        // var pieGoal1 = $(".goal1").val();
+        
         // set the data
         chart.data([
                 [$(".goal1").val(), 2.5],
@@ -72,22 +74,28 @@ $(".saveBtn").on("click", function(event) {
         chart.draw();
 
         function updateChart(index, value) {
-            chart.data.set(index, value);
+            chart.data([
+                [$(".goal1").val(), 2.5],
+                [$(".goal2").val(), 2.5],
+                [$(".goal3").val(), 2.5],
+                [$(".goal4").val(), 2.5]
             
+        ]);
+            chart.draw();
         }
                 
         
         
-        // anychart.onDocumentLoad(function () {
+        anychart.onDocumentLoad(function () {
             
-        // });
-//                      Page Two Weekly Breakdown
-        //Continuous pagination for navbar
-        //Update bar showing weeks worth of completed goals needs to fill comapritively with percent of total completion
-        //Will show integer percentage under update bar and change with percent completed
-        //Use D3.js to add interactive graph
-        //graph should correspond with checkboxes
-        //7-Day Forcast implements API call to open weather and returns data.
+        });
+        //              Page Two Weekly Breakdown
+        // Continuous pagination for navbar
+        // Update bar showing weeks worth of completed goals needs to fill comapritively with percent of total completion
+        // Will show integer percentage under update bar and change with percent completed
+        // Use D3.js to add interactive graph
+        // graph should correspond with checkboxes
+        // 7-Day Forcast implements API call to open weather and returns data.
 
         // var tooltipChart = null;
         // var title = null;
