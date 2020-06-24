@@ -89,6 +89,22 @@ $(".saveBtn").on("click", function(event) {
         anychart.onDocumentLoad(function () {
             
         });
+
+        fetch("https://type.fit/api/quotes")
+        .then(function(response) {
+        return response.json();
+        })
+        .then(function(data) {
+        
+            for (var i = 0; i < 99; i++) {
+                var quoteChoices = data[Math.floor(Math.random() * 100)]
+            }
+        $("blockquote").append(quoteChoices.text);
+        $("cite").append(quoteChoices.author);
+            
+        });
+
+
         //              Page Two Weekly Breakdown
         // Continuous pagination for navbar
         // Update bar showing weeks worth of completed goals needs to fill comapritively with percent of total completion
