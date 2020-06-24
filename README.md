@@ -1,6 +1,7 @@
 # Week 7/Project-1-fitG6/
 <img src="https://www.pngitem.com/pimgs/m/520-5208614_curso-programacin-front-end-completo-transparent-html-css.png" width="100" height="100"> <img src="https://i.stack.imgur.com/dMXbE.png" width="125" height="100"><img src="https://i.dlpng.com/static/png/7044135_preview.png" width="150" height="100">
-A fitness application submitted as project 1 for week 7 by Jared Varnum, Tammy Cuthbert and Thomas Bragg.
+
+##A fitness application submitted as project 1 for week 7 by Jared Varnum, Tammy Cuthbert and Thomas Bragg.
 
 * [Github Repository](https://github.com/TicTac2992/project-1-fitG6)
 * [Github Deployed Site](https://tictac2992.github.io/project-1-fitG6/)
