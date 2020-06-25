@@ -185,6 +185,10 @@
         font-family: 'Balsamiq Sans', cursive;
       }
 
+      .g6mb {
+        margin-bottom: 30px;
+      }
+
       .saveBtn1 {
         border-left: 1px solid black;
         border-top-right-radius: 15px;
