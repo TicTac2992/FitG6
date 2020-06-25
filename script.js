@@ -90,18 +90,22 @@ $(".saveBtn").on("click", function(event) {
             
         });
 
-        fetch("https://type.fit/api/quotes")
-        .then(function(response) {
-        return response.json();
-        })
-        .then(function(data) {
-        
-            for (var i = 0; i < 99; i++) {
-                var quoteChoices = data[Math.floor(Math.random() * 100)]
-            }
-        $("blockquote").append(quoteChoices.text);
-        $("cite").append(quoteChoices.author);
+        $(".faceBtn").on("click", function() {
+            fetch("https://type.fit/api/quotes")
+            .then(function(response) {
+            return response.json();
+            })
+            .then(function(data) {
             
+                for (var i = 0; i < 99; i++) {
+                    var quoteChoices = data[Math.floor(Math.random() * 100)]
+                }
+            $("blockquote").empty();
+            $("cite").empty();
+            $("blockquote").append(quoteChoices.text);
+            $("cite").append(quoteChoices.author);
+                
+            });
         });
 
 
