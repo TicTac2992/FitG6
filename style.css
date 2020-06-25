@@ -1,12 +1,5 @@
-/* Build out with Foundation!!! */
+
 /* PAGE ONE DAILY GOALS */
-    /* Navbar styling */
-    /* Jumbotron style element for "todays goals" */
-    /* Styling for todays goals sliders and classes to change incomplete to completed */
-    /* Card style for text heading and circle pie chart content */
-    /* Emotional faces elements */
-    /* Style for checkboxes below face elements */
-    /* Style for inspirational quote */
     /* Style the navigation bar */
       .navbar {
       width: 100%;
@@ -48,35 +41,36 @@
       width: 5%;
       padding: 10px;
       }
+
 /* PAGE TWO WEEKLY BREAKDOWN */
-    /* continuous navbar styling */
+    
     /* Style for completed goals for the week bar */
-    /* Calender styling aligning with graph*/
     /* Chekbox styling aligning with graph */
-    /* Jumbotron style for weather forcast */
-    /* Styling for weather forcast */
 
 /* PAGE THREE PERSONAL NOTES */
     /* Continuous navbar styling */
     /* Styles for days of the week and Header */
     /* Styles for jumbotron text area */
-    /* Use google fonts to add styled font */
+    
 
+    /* Continuous background styling for body */
       body {
         background-image: url("https://www.transparenttextures.com/patterns/light-honeycomb.png");
         background-color:#f0f0f0;
       }
 
+      /* Use google fonts to add styled font */
       h1, h3, h5 {
         font-family: 'Krona One', sans-serif;
       }
 
+    /* Styling for weather forcast */
       .g6card {
         background-color: darksalmon;
         color: aliceblue;
         border-radius: 10px;
         width: fit-content;
-        margin: 20px;
+        margin: 10px;
       }
 
       .g6layer {
@@ -89,6 +83,44 @@
         margin-top: 50px;
         margin-bottom: 50px;
         padding: 10px;
+      }
+
+      .faceDiv {
+        margin-top: 50px;
+        margin-bottom: 50px;
+      }
+
+      /* Style for inspirational quote */
+      .g6quote {
+        font-size: 35px;
+        margin: 50px;
+      }
+
+      /* Style for inspirational quote */
+      .g6author {
+        font-size: 20px;
+      }
+
+      /* Emotional faces elements */
+      .faceBtn {
+        width: 150px;
+        height: 150px;
+        font-size: 150px;
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+
+      .faceBtn i:hover {
+        border-radius: 20px;
+        animation: pulse 1s infinite;
+        animation-timing-function: linear; 
+      }
+
+      @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.1);
+        100% { transform: scale(1); }
+        }
       }
 
       .g6marg {
@@ -105,7 +137,8 @@
         font-size: 16px;
         line-height: 1;
       }
-      
+
+      /* Jumbotron style element for "Daily goals" */
       .jumbotron {
         text-align: center;
         background-color: transparent;
@@ -118,6 +151,7 @@
         padding-top: 50px;
       }
 
+      /* Card style for text heading and circle pie chart content */
       .pie {
         width: 500px; 
         height: 400px; 
@@ -159,6 +193,10 @@
         color: white;
         padding-left: 20px;
         padding-right: 20px;
+      }
+
+      .saveBtn1 i:hover{
+        transform: scale(2.5);
       }
       
       .saveBtn {
